@@ -21,7 +21,13 @@ connectDB();
 const playersRoutes = require('./routes/playersRoutes');
 const teamsRoutes = require('./routes/teamRoutes');
 
+app.get('/', (req, res) => {
+    try {
+        res.send({ name: "api successfylly " })
+    } catch (error) {
 
+    }
+})
 app.use('/api/players', playersRoutes);
 app.use('/api/teams', teamsRoutes);
 
